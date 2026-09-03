@@ -1,0 +1,4 @@
+{# Button. variant: primary | secondary. Becomes one React component in the rewrite. #}
+{% macro button(label, type='submit', variant='primary') %}
+<button type="{{ type }}" class="button button-{{ variant }}">{{ label }}</button>
+{% endmacro %}

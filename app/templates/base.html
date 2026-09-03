@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ app_name }}{% endblock %}</title>
+  {# Claude Design bundle: once app/design/project/ holds the export, link its token CSS here,
+     before app.css, e.g. <link rel="stylesheet" href="/design/tokens/tokens.css">. See AGENTS.md 8. #}
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  {% import "components/button.html" as buttons %}
+  <header class="app-header">
+    <a class="brand" href="/">{{ app_name }}</a>
+    <nav class="app-nav">
+      <a href="/example">{{ t('example.title') }}</a>
+      <a href="/outbox">{{ t('outbox.title') }}</a>
+    </nav>
+    <div class="app-session">
+      <span class="lang-switch" aria-label="{{ t('common.language') }}">
+        <a href="/lang/de"{% if lang == 'de' %} aria-current="true"{% endif %}>DE</a>
+        <a href="/lang/en"{% if lang == 'en' %} aria-current="true"{% endif %}>EN</a>
+      </span>
+      {% if request.session.get('user_id') %}
+      <span class="user">{{ request.session.get('user_name') }} · {{ request.session.get('role') }}</span>
+      <form method="post" action="/auth/signout">{{ buttons.button(t('common.signOut'), variant='secondary') }}</form>
+      {% endif %}
+    </div>
+  </header>
+  <main class="app-main">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="app-footer">{{ t('common.copyright', year=year) }}</footer>
+</body>
+</html>

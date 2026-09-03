@@ -1,0 +1,11 @@
+{% import "components/form_field.html" as fields with context %}
+{% import "components/button.html" as buttons %}
+<section class="card">
+  <h2>{{ t('example.create.title') }}</h2>
+  {% if error %}<p class="form-error">{{ t(error) }}</p>{% endif %}
+  <form method="post" action="/example">
+    {{ fields.form_field('title', t('example.create.titleLabel'), form.get('title', ''), field_errors.get('title', [])) }}
+    {{ fields.form_field('description', t('example.create.descriptionLabel'), form.get('description', ''), field_errors.get('description', []), multiline=True) }}
+    {{ buttons.button(t('example.create.submit')) }}
+  </form>
+</section>

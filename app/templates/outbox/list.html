@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}{{ t('outbox.title') }} · {{ app_name }}{% endblock %}
+{% block content %}
+<h1>{{ t('outbox.title') }}</h1>
+<p class="intro">{{ t('outbox.introduction') }}</p>
+{% if messages %}
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>{{ t('outbox.sentAt') }}</th>
+      <th>{{ t('outbox.channel') }}</th>
+      <th>{{ t('outbox.recipient') }}</th>
+      <th>{{ t('outbox.subject') }}</th>
+      <th>{{ t('outbox.body') }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for message in messages %}
+    <tr>
+      <td>{{ message.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+      <td>{{ message.channel }}</td>
+      <td>{{ message.recipient }}</td>
+      <td>{{ message.subject }}</td>
+      <td>{{ message.body }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">{{ t('outbox.empty') }}</p>
+{% endif %}
+{% endblock %}

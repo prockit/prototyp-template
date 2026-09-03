@@ -1,0 +1,62 @@
+{
+  "common": {
+    "companyName": "LiSEC",
+    "copyright": "© {year} LiSEC",
+    "signIn": "Anmelden",
+    "signOut": "Abmelden",
+    "cancel": "Abbrechen",
+    "back": "Zurück",
+    "edit": "Bearbeiten",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "yes": "Ja",
+    "no": "Nein",
+    "notApplicable": "–",
+    "details": "Details",
+    "language": "Sprache",
+    "german": "Deutsch",
+    "english": "English",
+    "createdAt": "Erstellt"
+  },
+  "home": {
+    "title": "Start",
+    "welcome": "Willkommen, {name}.",
+    "introduction": "Das ist ein Prototyp mit Beispieldaten. Über die Navigation oben erreichst du die Funktionen.",
+    "prototypeNotice": "Prototyp: Nichts wird irgendwohin gesendet oder außerhalb dieser Beispieldatenbank gespeichert."
+  },
+  "auth": {
+    "title": "Anmelden",
+    "chooseUser": "Wähle, wer du in diesem Prototyp sein möchtest:",
+    "prototypeNotice": "Das ist eine simulierte Anmeldung. Die echte Anwendung verwendet die Firmenanmeldung (Microsoft Entra ID).",
+    "signInAs": "Anmelden als {name}",
+    "role": "Rolle"
+  },
+  "outbox": {
+    "title": "Simulierter Postausgang",
+    "introduction": "Nachrichten, die der Prototyp gesendet hätte. Es wird nichts wirklich gesendet; die echte Anwendung bindet die echten Kanäle an.",
+    "empty": "Noch keine Nachrichten.",
+    "channel": "Kanal",
+    "recipient": "Empfänger",
+    "subject": "Betreff",
+    "body": "Nachricht",
+    "sentAt": "Zeitpunkt"
+  },
+  "example": {
+    "title": "Beispiel-Funktion",
+    "introduction": "Diese kleine Funktion zeigt die vorgesehene Trennung zwischen Route, Service, Repository und Template. Lesen läuft über den Service, Schreiben über eine POST-Route, die zuerst validiert.",
+    "empty": "Keine Beispieleinträge vorhanden.",
+    "create": {
+      "title": "Beispieleintrag hinzufügen",
+      "titleLabel": "Titel",
+      "descriptionLabel": "Beschreibung",
+      "submit": "Anlegen",
+      "errors": {
+        "titleRequired": "Bitte geben Sie einen Titel ein.",
+        "titleTooLong": "Der Titel darf höchstens 200 Zeichen lang sein.",
+        "descriptionRequired": "Bitte geben Sie eine Beschreibung ein.",
+        "descriptionTooLong": "Die Beschreibung darf höchstens 2000 Zeichen lang sein.",
+        "unexpected": "Der Eintrag konnte nicht gespeichert werden. Bitte versuchen Sie es später erneut."
+      }
+    }
+  }
+}

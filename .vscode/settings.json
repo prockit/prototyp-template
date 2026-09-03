@@ -1,0 +1,28 @@
+{
+  "files.exclude": {
+    ".claude": true,
+    ".devcontainer": true,
+    ".github": true,
+    ".vscode": true,
+    ".venv": true,
+    ".pytest_cache": true,
+    ".ruff_cache": true,
+    "**/__pycache__": true,
+    ".env": true,
+    ".env.example": true,
+    ".gitignore": true,
+    ".python-version": true,
+    "AGENTS.md": true,
+    "CLAUDE.md": true,
+    "LICENSE": true,
+    "conftest.py": true,
+    "data": true,
+    "pyproject.toml": true,
+    "uv.lock": true
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true
+  }
+}

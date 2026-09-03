@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Secrets
+.env
+
+# SQLite prototype database
+data/*.db
+data/*.db-journal
+
+# Owner inbox: files are processed and moved by the agent, never committed here
+inbox/*
+!inbox/README.md

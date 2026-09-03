@@ -1,0 +1,62 @@
+{
+  "common": {
+    "companyName": "LiSEC",
+    "copyright": "© {year} LiSEC",
+    "signIn": "Sign in",
+    "signOut": "Sign out",
+    "cancel": "Cancel",
+    "back": "Back",
+    "edit": "Edit",
+    "save": "Save",
+    "delete": "Delete",
+    "yes": "Yes",
+    "no": "No",
+    "notApplicable": "–",
+    "details": "Details",
+    "language": "Language",
+    "german": "Deutsch",
+    "english": "English",
+    "createdAt": "Created"
+  },
+  "home": {
+    "title": "Home",
+    "welcome": "Welcome, {name}.",
+    "introduction": "This is a prototype running with sample data. Use the navigation above to open the features.",
+    "prototypeNotice": "Prototype: nothing here is sent or stored anywhere except in this sample database."
+  },
+  "auth": {
+    "title": "Sign in",
+    "chooseUser": "Choose who you want to be in this prototype:",
+    "prototypeNotice": "This is a simulated login. The real application will use the company login (Microsoft Entra ID).",
+    "signInAs": "Sign in as {name}",
+    "role": "Role"
+  },
+  "outbox": {
+    "title": "Simulated outbox",
+    "introduction": "Messages the prototype would have sent. Nothing is actually sent; the real application will connect the real channels.",
+    "empty": "No messages yet.",
+    "channel": "Channel",
+    "recipient": "Recipient",
+    "subject": "Subject",
+    "body": "Message",
+    "sentAt": "Time"
+  },
+  "example": {
+    "title": "Example feature",
+    "introduction": "This small feature shows the intended separation between route, service, repository and template. Reads go through the service, writes through a POST route that validates first.",
+    "empty": "No example items available.",
+    "create": {
+      "title": "Add example item",
+      "titleLabel": "Title",
+      "descriptionLabel": "Description",
+      "submit": "Create",
+      "errors": {
+        "titleRequired": "Please enter a title.",
+        "titleTooLong": "The title must not exceed 200 characters.",
+        "descriptionRequired": "Please enter a description.",
+        "descriptionTooLong": "The description must not exceed 2000 characters.",
+        "unexpected": "The item could not be saved. Please try again later."
+      }
+    }
+  }
+}

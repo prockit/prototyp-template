@@ -1,0 +1,23 @@
+{
+  "name": "Prototype workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "Prototype app", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "pip install --quiet uv && npm install -g @anthropic-ai/claude-code && uv sync && ([ -f .env ] || cp .env.example .env) && uv run python -m app.cli seed",
+  "postStartCommand": "nohup uv run python -m app.cli start > /tmp/prototype-app.log 2>&1 &",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "qwtel.sqlite-viewer"
+      ]
+    }
+  }
+}
